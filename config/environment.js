@@ -4,6 +4,13 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'ifttt-ember-app',
     environment,
+    contentSecurityPolicy: {'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"},
+    firebase: {
+      apiKey: 'AIzaSyAJV_RrCESu4IycJfoacD8_U8GLjfG5tGM',
+      authDomain: 'ifttt-ember-project.firebaseapp.com',
+      databaseURL: 'https://ifttt-ember-project.firebaseio.com',
+      storageBucket: 'ifttt-ember-project.appspot.com',
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

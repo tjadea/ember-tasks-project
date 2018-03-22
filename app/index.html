@@ -21,5 +21,19 @@
     <script src="{{rootURL}}assets/ifttt-ember-app.js"></script>
 
     {{content-for "body-footer"}}
+    
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAJV_RrCESu4IycJfoacD8_U8GLjfG5tGM",
+    authDomain: "ifttt-ember-project.firebaseapp.com",
+    databaseURL: "https://ifttt-ember-project.firebaseio.com",
+    projectId: "ifttt-ember-project",
+    storageBucket: "",
+    messagingSenderId: "183765970950"
+  };
+  firebase.initializeApp(config);
+</script>
   </body>
 </html>

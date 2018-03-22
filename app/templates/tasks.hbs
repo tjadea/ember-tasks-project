@@ -1,0 +1,13 @@
+{{outlet}}
+
+<h2>Tasks</h2>
+
+{{#each model as |task|}}
+<div class="card">
+    <div class="card-header">
+        {{#link-to 'tasks.edit' task.id}}{{task.title}}{{/link-to}}</div>
+    <div class="card-body">{{task.description}}</div>
+    <div class="card-text">Due: {{format-date task.date}}</div>
+    <button class="btn btn-danger" {{action 'deleteTask' task.id}}>Delete</button>
+</div>
+{{/each}}
